@@ -1,31 +1,13 @@
 const mongoose = require('mongoose');
 
+// 📌 Esquema para la colección "Usuario"
+// Define la estructura de los documentos en la base de datos
 const usuarioSchema = new mongoose.Schema({
-    nombre: { 
-        type: String, 
-        required: [true, "El nombre es obligatorio"], 
-        trim: true 
-    },
-    apellidos: { 
-        type: String, 
-        required: [true, "Los apellidos son obligatorios"], 
-        trim: true 
-    },
-    celular: { 
-        type: String, 
-        required: [true, "El celular es obligatorio"], 
-        match: [/^\d{10}$/, "El celular debe tener 10 dígitos"]
-    },
-    correo: { 
-        type: String, 
-        required: [true, "El correo es obligatorio"], 
-        unique: true, 
-        trim: true, 
-        lowercase: true, 
-        match: [/^\S+@\S+\.\S+$/, "El correo no tiene un formato válido"]
-    }
-}, {
-    timestamps: true // ✅ Agrega automáticamente `createdAt` y `updatedAt`
+    nombre: { type: String, required: true }, // 🏷️ Nombre del usuario
+    apellidos: { type: String, required: true }, // 🏷️ Apellidos del usuario
+    celular: { type: String, required: true }, // 📞 Número de celular
+    correo: { type: String, required: true, unique: true } // 📧 Correo electrónico (único)
 });
 
+// 📤 Exportamos el modelo "Usuario"
 module.exports = mongoose.model('Usuario', usuarioSchema);
