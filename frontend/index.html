@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Biblioteca</h1>
+        
+        <label for="tipo">Selecciona el tipo de dato:</label>
+        <select id="tipo" onchange="mostrarCampos()">
+            <option value="">-- Selecciona --</option>
+            <option value="usuario">Usuario</option>
+            <option value="libro">Libro</option>
+            <option value="ejemplar">Ejemplar</option>
+            <option value="prestamo">Préstamo</option>
+            <option value="reserva">Reserva</option>
+        </select>
+        
+        <form id="formulario">
+            <div id="campos-dinamicos"></div>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+    
+    <script>
+        function mostrarCampos() {
+            const tipo = document.getElementById("tipo").value;
+            const camposDinamicos = document.getElementById("campos-dinamicos");
+            camposDinamicos.innerHTML = "";
+            
+            let campos = "";
+            switch(tipo) {
+                case "usuario":
+                    campos = `
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" required>
+                        <label>Apellidos:</label>
+                        <input type="text" name="apellidos" required>
+                        <label>Celular:</label>
+                        <input type="text" name="celular" required>
+                        <label>Correo:</label>
+                        <input type="email" name="correo" required>
+                    `;
+                    break;
+                case "libro":
+                    campos = `
+                        <label>Nombre del libro:</label>
+                        <input type="text" name="nombre_libro" required>
+                        <label>Año de publicación:</label>
+                        <input type="number" name="anio_publicacion" required>
+                        <label>Autor:</label>
+                        <input type="text" name="autor" required>
+                    `;
+                    break;
+                case "ejemplar":
+                    campos = `
+                        <label>Número de ejemplares:</label>
+                        <input type="number" name="num_ejemplares" required>
+                    `;
+                    break;
+                case "prestamo":
+                    campos = `
+                        <label>Nombre y Apellido:</label>
+                        <input type="text" name="nombre_prestamo" required>
+                        <label>Libro:</label>
+                        <input type="text" name="libro_prestamo" required>
+                        <label>Día de préstamo:</label>
+                        <input type="date" name="dia_prestamo" required>
+                        <label>Fin del préstamo:</label>
+                        <input type="date" name="fin_prestamo" required>
+                    `;
+                    break;
+                case "reserva":
+                    campos = `
+                        <label>Nombre y Apellidos:</label>
+                        <input type="text" name="nombre_reserva" required>
+                        <label>Días para hacer la reserva:</label>
+                        <input type="number" name="dias_reserva" required>
+                    `;
+                    break;
+            }
+            
+            camposDinamicos.innerHTML = campos;
+        }
+    </script>
+</body>
+</html>
