@@ -1,10 +1,20 @@
 # CRUD_BIBLIOTECA
-# 📚 CRUD de Biblioteca!!!
 
 ## 📖 Descripción
-Este es un sistema CRUD para la gestión de una biblioteca, que permite administrar usuarios, libros, ejemplares, préstamos y reservas de manera eficiente. El sistema está desarrollado con Node.js, Express y MongoDB para el backend, y con HTML, CSS y JavaScript para el frontend.
+ Bienvenido al proyecto CRUD Biblioteca, una aplicación web para la gestión de usuarios, libros, ejemplares, préstamos y reservas en una biblioteca. Permite registrar datos, almacenarlos en una base de datos y visualizarlos en una interfaz intuitiva.
 
-## 🚀 Características
+_Tecnologías Utilizadas_
+
+Frontend: HTML, CSS (colores pasteles - lila), JavaScript
+
+Backend: Node.js con Express.js
+
+Base de Datos: MongoDB Atlas (próximamente MySQL)
+
+Versionamiento: Git & GitHub
+---------------------------------------------------------------------------------------
+
+## Caracteristicas
 - 📌 **Usuarios:** Registrar, listar y administrar usuarios.
 - 📚 **Libros:** Agregar, visualizar y gestionar libros.
 - 📖 **Ejemplares:** Control de la cantidad de ejemplares disponibles.
@@ -13,12 +23,18 @@ Este es un sistema CRUD para la gestión de una biblioteca, que permite administ
 - 🎨 **Diseño atractivo:** Interfaz moderna con colores pasteles.
 - 💾 **Almacenamiento en MongoDB Atlas:** Base de datos en la nube.
 
-## 🛠️ Tecnologías Utilizadas
-- **Backend:** Node.js, Express.js, MongoDB Atlas, Mongoose.
-- **Frontend:** HTML, CSS (colores pasteles), JavaScript.
-- **Herramientas adicionales:** Git, GitHub, PowerShell.
+## Funcionalidades 
 
+✅ Registrar usuarios con nombre, apellidos, celular y correo.
+✅ Agregar libros con título, año de publicación y autor.
+✅ Gestionar ejemplares disponibles.
+✅ Controlar préstamos con fecha de inicio y fin.
+✅ Administrar reservas con validaciones en tiempo real.
+✅ Guardar y visualizar datos en MongoDB Compass.
+
+______________________________________________________________
 ## ⚙️ Instalación y Ejecución
+_Resumen de como fueron los inicios_
 1. **Clonar el repositorio:**
    ```sh
    git clone https:/Saritaidk18diehb/github.com/CRUD_BIBLIOTECA/.git
