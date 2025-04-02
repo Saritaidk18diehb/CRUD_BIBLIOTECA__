@@ -1,14 +1,15 @@
 {
   "name": "crud_biblioteca",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "CRUD para gestión de una biblioteca",
+  "main": "backend/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/index.js",
+    "dev": "nodemon backend/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -17,5 +18,6 @@
     "mysql2": "^3.14.0",
     "nodemon": "^3.1.9",
     "sequelize": "^6.37.7"
-  }
+  },
+  "devDependencies": {}
 }
